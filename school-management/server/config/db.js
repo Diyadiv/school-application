@@ -1,7 +1,5 @@
-import mongoose from "mongoose";
-import dotenv from "dotenv";
-
-dotenv.config(); // Load environment variables
+const mongoose = require("mongoose");
+require("dotenv").config(); // Load environment variables
 
 const connectDB = async () => {
     try {
@@ -16,4 +14,4 @@ const connectDB = async () => {
     }
 };
 
-export default connectDB;
+module.exports = connectDB; // Export using CommonJS
